@@ -9,7 +9,7 @@ var graymap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{
     id: "mapbox/light-v10",
     accessToken: API_KEY
 });
-
+// Satelitght
 var satellitemap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
     attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
     tileSize: 512,
@@ -18,7 +18,7 @@ var satellitemap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/
     id: "mapbox/satellite-v9",
     accessToken: API_KEY
 });
-
+// Oatdoors
 var outdoors = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
     attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
     tileSize: 512,
@@ -37,7 +37,6 @@ var map = L.map("mapid", {
     zoom: 3,
     layers: [graymap, satellitemap, outdoors]
 });
-
 // Adding our 'graymap' tile layer to the map.
 graymap.addTo(map);
 
@@ -85,7 +84,6 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
             weight: 0.5
         };
     }
-
     // This function determines the color of the marker based on the magnitude of the earthquake.
     function getColor(depth) {
         switch (true) {
