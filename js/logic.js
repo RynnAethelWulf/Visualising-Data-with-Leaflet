@@ -1,7 +1,4 @@
-console.log("Step 2 working");
-
-
-// We create the tile layers that will be the selectable backgrounds of our map.
+// Creating Layers.
 // One for our grayscale background.
 
 var graymap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
